@@ -107,7 +107,11 @@ class CircularTimerCard extends LitElement {
     if (config.color_state) {
       this._colorState = config.color_state;
     }
-
+    
+    if (config.state_color) {
+      this._stateColor = config.state_color;
+    }
+    
     if (config.empty_bar_color) {
       this._defaultTimerEmptyFill = config.empty_bar_color;
     }
