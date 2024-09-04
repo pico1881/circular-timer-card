@@ -279,7 +279,7 @@ class CircularTimerCard extends LitElement {
     } else {
 
       return html`
-      <ha-card>
+      <ha-card style="background:${this._backgroundColor};">
         <svg viewBox="0 0 100 100">
           <g transform="translate(50,50)">
             ${repeat(
