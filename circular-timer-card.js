@@ -28,7 +28,7 @@ class CircularTimerCard extends LitElement {
 
     this._colorState = false;
     this._stateColor = getComputedStyle(document.documentElement).getPropertyValue("--primary-text-color");
-    this._backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--card-background-color');
+    this._backgroundColor = getComputedStyle(document.documentElement).getPropertyValue("--card-background-color");
     
     // To update card every half second
     this._timeUpdater = 1;
