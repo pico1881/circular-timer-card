@@ -28,7 +28,7 @@ class CircularTimerCard extends LitElement {
 
     this._colorState = false;
     this._stateColor = getComputedStyle(document.documentElement).getPropertyValue("--primary-text-color");
-    this._backgroundColor = getComputedStyle(document.documentElement).getPropertyValue("--card-background-color");
+
     
     // To update card every half second
     this._timeUpdater = 1;
@@ -112,10 +112,6 @@ class CircularTimerCard extends LitElement {
     if (config.state_color) {
       this._stateColor = config.state_color;
     }
-
-    if (config.background_color) {
-      this._backgroundColor = config.background_color;
-    }    
     
     if (config.empty_bar_color) {
       this._defaultTimerEmptyFill = config.empty_bar_color;
@@ -254,7 +250,7 @@ class CircularTimerCard extends LitElement {
     if (this._layout === "minimal") {
 
       return html`
-      <ha-card style="background:${this._backgroundColor};">
+      <ha-card>
         <div class="header">
           <div class="icon" style="${icon_style}">
             <ha-icon icon="${icon}" style="${this._colorState ? `color: ${textColor};"` : `""`};"></ha-icon>
@@ -279,7 +275,7 @@ class CircularTimerCard extends LitElement {
     } else {
 
       return html`
-      <ha-card style="background:${this._backgroundColor};">
+      <ha-card>
         <svg viewBox="0 0 100 100">
           <g transform="translate(50,50)">
             ${repeat(
